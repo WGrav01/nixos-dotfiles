@@ -47,7 +47,6 @@ in {
   # boot.extraModulePackages = [config.boot.kernelPackages.nvidia_x11];
   boot.blacklistedKernelModules = ["noveau"];
   programs.corectrl.enable = true;
-  services.auto-cpufreq.enable = true;
   services.upower.enable = true;
   environment.systemPackages = [nvidia-offload];
   programs.rog-control-center.enable = true;
@@ -83,10 +82,8 @@ in {
     };
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
     extraPackages = with pkgs; [
       amdvlk
       rocm-opencl-icd

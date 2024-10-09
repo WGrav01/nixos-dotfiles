@@ -21,7 +21,7 @@
     ./nix-settings.nix
     ./shell.nix
     ./users.nix
-    # ./neovim.nix
+    ./neovim.nix
     ./wm.nix
     ./misc.nix
     ./packages.nix
@@ -58,10 +58,10 @@
     jack.enable = true;
   };
 
-  services.printing.enable = false;
+  services.printing.enable = true;
   # Required to detect printers
   services.avahi = {
-    enable = false;
+    enable = true;
     nssmdns4 = true;
     openFirewall = true;
   };
@@ -70,8 +70,8 @@
   boot.kernelParams = ["ipv6.disable=1"];
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [];
-    allowedUDPPorts = [51820];
+    allowedTCPPorts = [42852];
+    allowedUDPPorts = [51820 42852];
   };
 
 

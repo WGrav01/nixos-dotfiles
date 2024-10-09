@@ -19,7 +19,6 @@
         }))
 
     yadm
-    neovim
     busybox
     nitch
     cargo
@@ -52,7 +51,7 @@
     qbittorrent
     zoom-us
     tmux
-    gnome3.adwaita-icon-theme
+    adwaita-icon-theme
     winetricks
     htop
     steam
